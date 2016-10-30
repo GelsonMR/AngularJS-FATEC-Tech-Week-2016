@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello jQuery</title>
+        <script src="lib/jquery/jquery.min.js"></script>
+        <script>
+            $(function(){
+                var nome = $('#nome');
+                var saudacao = $('#saudacao');
+
+                nome.keyup(function(){
+                    saudacao.text('Olá ' + nome.val() + '!');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <input id="nome" type="text">
+        <h2 id="saudacao"></h2>
+    </body>
+</html>

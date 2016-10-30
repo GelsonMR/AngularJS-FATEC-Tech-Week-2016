@@ -1,0 +1,23 @@
+<div class="pagina" style="width: 600px">
+	<h2 class="titulo">Nova conta</h2>
+	<form name="formNovaConta">
+		<div class="cartao">
+			<div class="input">
+				<label>Descrição</label>
+				<input type="text" ng-model="conta.descricao" required>
+			</div>
+			<div class="input">
+				<label>Categoria</label>
+				<select  ng-model="conta.categoria" ng-options="categoria as categoria for categoria in categorias" required></select>
+			</div>
+			<div class="input">
+				<label>Valor</label>
+				<input type="text" ng-model="conta.valor" required>
+			</div>
+			<mv-color-picker ng-model="conta.cor"></mv-color-picker>
+			<div style="text-align: right">
+				<button class="botao" ng-disabled="formNovaConta.$invalid" ng-click="confirmarConta(conta)">Confirmar</button>
+			</div>
+		</div>
+	</form>
+</div>

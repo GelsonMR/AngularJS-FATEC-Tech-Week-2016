@@ -1,0 +1,191 @@
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+html {
+	background-color: #EEE;
+	font-family: Roboto, Arial, sans-serif;
+}
+.cabecalho {
+	display: flex;
+    align-items: center;
+    padding: 0 16px 0 10px;
+    background-color: #00E676;
+    height: 64px;
+	font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.cabecalho .app {
+	font-size: 24px;
+	font-weight: 400;
+}
+.cabecalho .autor {
+	font-size: 20px;
+	font-weight: 400;
+	margin-left: auto;
+}
+.cabecalho img {
+	max-height: 100%;
+	max-width: 100%;
+}
+.cabecalho > button {
+	width: 48px;
+	height: 48px;
+	background-color: transparent;
+	border-radius: 50%;
+	transition: 200ms ease-in-out;
+}
+.cabecalho > button:hover {
+	background-color: rgba(255,255,255,.4);
+}
+.cabecalho > button:active {
+	background-color: rgba(255,255,255,.6);
+}
+.pagina {
+	margin: 16px auto;
+	max-width: 100%;
+	padding: 10px;
+}
+button.icon {
+	background-color: transparent;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	color: rgba(0,0,0,.8);
+	transition: 200ms ease-in-out;
+}
+button.icon:hover {
+	background-color: rgba(0,0,0,.2);
+}
+.tabela, .cartao {
+	background-color: white;
+	text-align: left;
+	margin-bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+	padding: 16px;
+}
+.tabela {
+	overflow: auto;
+}
+.tabela table {
+	width: 100%;
+	border-spacing: 0;
+}
+.tabela .numerico {
+	text-align: right;
+}
+.tabela th {
+	height: 56px;
+	font-weight: 500;
+	font-size: 12px;
+}
+.tabela td {
+	height: 48px;
+	font-size: 13px;
+}
+.tabela tr:not(:last-child) > * {
+	border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.tabela tr > * {
+	padding: 0 24px;
+}
+.tabela [type="checkbox"] {
+	width: 18px;
+	height: 18px;
+}
+.tabela .pago {
+	background-color: #FFF9C4;
+	color: rgba(0,0,0,.6);
+}
+.tabela .botoes {
+	white-space: nowrap;
+	width: 114px;
+}
+.titulo {
+	margin-bottom: 8px;
+	color: rgba(0,0,0,.8);
+}
+.etiqueta {
+	width: 24px;
+	height: 24px;
+	border: 2px solid rgba(0,0,0,.1);
+	border-radius: 3px;
+}
+.input {
+	position: relative;
+	margin: 16px 0 24px;
+	display: flex;
+}
+.input > input,
+.input > select {
+	flex: 1;
+	width: 100%;
+	font-size: 16px;
+	height: 32px;
+	background-color: transparent;
+	border-bottom: 1px solid rgba(0,0,0,.4);
+}
+.input > *:not(label) + *:not(label) {
+	margin-left: 8px;
+}
+.input > *:focus {
+	border-color: #03a9f4;
+}
+.input > label {
+	position: absolute;
+	left: 0;
+	bottom: 100%;
+	font-size: 13px;
+	color: rgba(0,0,0,.6);
+}
+.picker {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	margin: 0;
+	background-color: white;
+	padding: 8px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.picker > * {
+	position: relative;
+	flex: 1 1 25%;
+	padding: 20px;
+	cursor: pointer;
+}
+.picker > *::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: 200ms ease-in-out;
+}
+.picker > *.selecionado::after {
+	border: 4px solid rgba(0,0,0,0.4);
+}
+.picker > *:hover::after {
+	background-color: rgba(0,0,0,.2);
+}
+button.botao {
+	font-family: inherit;
+	background-color: #00E676;
+	padding: 0 10px;
+	height: 30px;
+	font-weight: bold;
+	border-radius: 2px;
+	text-transform: uppercase;
+	transition: 200ms ease-in-out;
+}
+button.botao:hover {
+	background-color: #08b762;
+}
+button.botao[disabled] {
+	background-color: gray;
+}

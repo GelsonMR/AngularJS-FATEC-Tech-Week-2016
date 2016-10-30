@@ -1,0 +1,7 @@
+<div class="input">
+	<label>Cor</label>
+	<input type="text" ng-model="ngModel" ng-focus="mostrarCores = true" required readonly>
+	<div class="picker">
+		<div ng-repeat="cor in cores" ng-style="{'background-color': cor}" ng-click="selecionarCor(cor)" ng-class="{'selecionado': cor === ngModel}" ng-if="mostrarCores"></div>
+	</div>
+</div>
